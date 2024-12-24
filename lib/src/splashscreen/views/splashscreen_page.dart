@@ -3,6 +3,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:shoes_store/common/services/storage.dart';
 
 
 class SplashPage extends StatefulWidget {
@@ -22,8 +23,12 @@ class _SplashPageState extends State<SplashPage> {
     _navigateToHome();
   }
   void _navigateToHome() {
-    Future.delayed(const Duration(seconds: 2), () {
-      context.go('/home'); // Chuyển đến view "home" sử dụng go_router
+    Future.delayed(const Duration(seconds: 5), () {
+      if(Storage().getBool('firstOpen') == null){
+        GoRouter.of(context).go("/onboarding");
+      }else{
+        GoRouter.of(context).go("/home");
+      }
     });
   }
   @override

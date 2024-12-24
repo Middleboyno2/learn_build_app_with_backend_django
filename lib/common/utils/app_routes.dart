@@ -3,15 +3,17 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shoes_store/src/entrypoint/views/entrypoint.dart';
+import 'package:shoes_store/src/login/views/auth.dart';
+import 'package:shoes_store/src/onboarding/views/onboarding_page.dart';
 import 'package:shoes_store/src/splashscreen/views/splashscreen_page.dart';
 
 import '../../main.dart';
+import '../../src/login/views/login_page.dart';
 
 final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 
-
 final GoRouter _router = GoRouter(
-   navigatorKey: navigatorKey,
+  navigatorKey: navigatorKey,
   initialLocation: '/',
   routes: [
     GoRoute(
@@ -26,10 +28,10 @@ final GoRouter _router = GoRouter(
       path: '/test',
       builder: (context, state) => const MyHomePage(),
     ),
-    // GoRoute(
-    //   path: '/onboarding',
-    //   builder: (context, state) => const OnBoardingScreen(),
-    // ),
+    GoRoute(
+      path: '/onboarding',
+      builder: (context, state) => const OnboardingPage(),
+    ),
     // GoRoute(
     //   path: '/review',
     //   builder: (context, state) => const ReviewsPage(),
@@ -54,10 +56,10 @@ final GoRouter _router = GoRouter(
     //   path: '/orders',
     //   builder: (context, state) => const OrdersPage(),
     // ),
-    // GoRoute(
-    //   path: '/login',
-    //   builder: (context, state) => const LoginPage(),
-    // ),
+    GoRoute(
+      path: '/login',
+      builder: (context, state) => const Auth(),
+    ),
     // GoRoute(
     //   path: '/register',
     //   builder: (context, state) => const RegistrationPage(),

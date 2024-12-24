@@ -1,4 +1,6 @@
 class AppText {
+  // App Name
+  static const String kAppName= 'Mr.Shoes';
   static const String kCategory = 'Category';
   static const String kCategories = 'Categories';
   static const String kNotifications = 'Notifications';
@@ -55,7 +57,11 @@ class AppText {
       "Your Wishlist awaits! Curate your dream looks and save favorites for later. It's the first step to making style aspirations a reality";
        static const String kOnboardHome =
       "Welcome to the ultimate fashion destination! Discover trends, shop your favorite styles, and elevate your wardrobe. Let's get started on your stylish journey today";
+
+  // Get Start
+  static const String kGetStarted = "Let's get started ";
 }
+
 
 // Your Wishlist awaits! Curate your dream looks and save favorites for later. It's the first step to making style aspirations a reality
 // 
