@@ -19,8 +19,10 @@ class WelcomeScreen extends StatefulWidget {
 }
 
 class _WelcomeScreenState extends State<WelcomeScreen> {
+
   @override
   Widget build(BuildContext context) {
+    final isDarkTheme = Theme.of(context).brightness == Brightness.dark;
     return Scaffold(
       body: Container(
         width: ScreenUtil().screenWidth,
@@ -30,7 +32,10 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             SizedBox(
               height: 100.h,
             ),
-            Image.asset(R.ASSETS_IMAGES_GETSTARTED_PNG),
+            Image.asset(
+              R.ASSETS_IMAGES_GETSTARTED_PNG,
+              height: 400,
+            ),
             SizedBox(
               height: 30.h,
             ),
@@ -47,7 +52,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               child: Text(
                 AppText.kOnboardHome,
                 textAlign: TextAlign.center,
-                style: appStyle(12, Kolors.kGray, FontWeight.normal),
+                style: appStyle(13, Kolors.kGray, FontWeight.normal),
               ),
             ),
             SizedBox(
@@ -71,7 +76,10 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               children: [
                 ReusableText(
                   text: "Already have an account?",
-                  style: appStyle(12, Kolors.kDark, FontWeight.normal),
+                  style: isDarkTheme == true ?
+                  appStyle(12, Kolors.kGrayLight, FontWeight.normal)
+                      :
+                  appStyle(12, Kolors.kDark, FontWeight.normal),
                 ),
                 TextButton(
                   onPressed: () {

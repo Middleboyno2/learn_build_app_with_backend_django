@@ -45,7 +45,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
             ],
           ),
           Align(
-            alignment: Alignment(0, 0.9),
+            alignment: const Alignment(0, 0.9),
             child: Container(
               padding: EdgeInsets.symmetric(horizontal: 20.w),
               width: ScreenUtil().screenWidth,

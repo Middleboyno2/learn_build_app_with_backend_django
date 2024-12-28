@@ -6,6 +6,8 @@ import 'package:provider/provider.dart';
 import 'package:shoes_store/common/utils/app_routes.dart';
 import 'package:shoes_store/common/utils/environment.dart';
 import 'package:shoes_store/common/utils/kstrings.dart';
+import 'package:shoes_store/src/entrypoint/controllers/bottom_tab_notifier.dart';
+import 'package:shoes_store/src/home/controllers/home_notifier.dart';
 import 'package:shoes_store/src/onboarding/controllers/onboarding_notifier.dart';
 import 'package:shoes_store/src/splashscreen/views/splashscreen_page.dart';
 
@@ -24,6 +26,8 @@ void main() async{
     MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => OnboardingNotifier()),
+        ChangeNotifierProvider(create: (_) => BottomTabNotifier()),
+        ChangeNotifierProvider(create: (_) => HomeNotifier())
       ],
       child: const MyApp()
     )
@@ -47,6 +51,7 @@ class MyApp extends StatelessWidget {
         return MaterialApp.router(
           // turn off banner debug
           debugShowCheckedModeBanner: false,
+          //title
           title: AppText.kAppName,
           // Set default theme
           theme: lightTheme,
@@ -58,58 +63,6 @@ class MyApp extends StatelessWidget {
         );
       },
       child: const SplashPage(),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key});
-
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-
-      _counter++;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-
-    return Scaffold(
-      appBar: AppBar(
-
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-
-        title: Text("test"),
-      ),
-      body: Center(
-
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              Environment.apiKey,
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ),
     );
   }
 }

@@ -28,7 +28,7 @@ class OnboardingPage2  extends StatelessWidget {
                 child: Text(
                   AppText.kOnboardHome,
                   textAlign: TextAlign.center,
-                  style: appStyle(12, Kolors.kGray, FontWeight.normal),
+                  style: appStyle(13, Kolors.kGray, FontWeight.normal),
                 ),
               )
           )
