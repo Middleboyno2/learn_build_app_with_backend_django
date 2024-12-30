@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:provider/provider.dart';
@@ -7,6 +8,8 @@ import 'package:shoes_store/src/entrypoint/controllers/bottom_tab_notifier.dart'
 import 'package:shoes_store/src/home/views/home.dart';
 import 'package:shoes_store/src/profile/views/profile_screen.dart';
 import 'package:shoes_store/src/wishlist/views/wishlist_screen.dart';
+
+import '../../../const/resource.dart';
 
 class AppEntryPoint extends StatefulWidget {
   const AppEntryPoint({super.key});
@@ -29,17 +32,28 @@ class _AppEntryPointState extends State<AppEntryPoint> {
     return Consumer<BottomTabNotifier>(
       builder: (context, value, child){
         return Scaffold(
-          backgroundColor: Colors.transparent,
+          // backgroundColor: Colors.transparent,
           body: Stack(
             children: [
-              _page[context.watch<BottomTabNotifier>().selected],
+              Container(
+                height: ScreenUtil().screenHeight,
+                width: ScreenUtil().screenWidth,
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage(R.ASSETS_IMAGES_WAVE_JPEG),
+                      fit: BoxFit.cover
+                  ),
+                ),
+                child: _page[context.watch<BottomTabNotifier>().selected],
+              ),
+
               Align(
                 alignment: const Alignment(0,1),
                 child: Container(
                   margin: EdgeInsets.symmetric(horizontal: 10, vertical: 15),
                   decoration: BoxDecoration(
                     color: Colors.grey.withOpacity(0.5),
-                    borderRadius: BorderRadius.circular(18),
+                    borderRadius: BorderRadius.circular(22),
                   ),
                   child: GNav(
                     // color: Colors.grey.shade200,

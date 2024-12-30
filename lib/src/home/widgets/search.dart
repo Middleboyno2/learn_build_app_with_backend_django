@@ -71,6 +71,7 @@ class CustomSearch extends StatelessWidget {
           Expanded(
             child: Container(
               color: Colors.black.withOpacity(0.5),
+
             ),
           ),
         ],

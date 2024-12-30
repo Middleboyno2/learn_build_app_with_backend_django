@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shoes_store/src/entrypoint/views/entrypoint.dart';
 import 'package:shoes_store/src/login/views/auth.dart';
+import 'package:shoes_store/src/notification/views/notification.dart';
 import 'package:shoes_store/src/onboarding/views/onboarding_page.dart';
 import 'package:shoes_store/src/splashscreen/views/splashscreen_page.dart';
 
@@ -79,10 +80,10 @@ final GoRouter _router = GoRouter(
     //   builder: (context, state) => const AddressesListPage(),
     // ),
     //
-    //  GoRoute(
-    //   path: '/notifications',
-    //   builder: (context, state) => const NotificationPage(),
-    // ),
+     GoRoute(
+      path: '/notifications',
+      builder: (context, state) => const NotificationPage(),
+    ),
     //
     //  GoRoute(
     //   path: '/tracking',

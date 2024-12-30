@@ -23,6 +23,8 @@ class R {
   /// ![preview](file:///Volumes/Transfer/Projects/fashion/assets/images/failed.png)
   static const String ASSETS_IMAGES_FAILED_PNG = 'assets/images/failed.png';
 
+  static const String ASSETS_IMAGES_WAVE_JPEG =  'assets/images/wave.png';
+
   /// ![preview](file:///Volumes/Transfer/Projects/fashion/assets/images/getstarted.png)
   static const String ASSETS_IMAGES_GETSTARTED_PNG =
       'assets/images/getstarted.png';
