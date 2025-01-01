@@ -6,6 +6,7 @@ import 'package:shoes_store/src/entrypoint/views/entrypoint.dart';
 import 'package:shoes_store/src/login/views/auth.dart';
 import 'package:shoes_store/src/notification/views/notification.dart';
 import 'package:shoes_store/src/onboarding/views/onboarding_page.dart';
+import 'package:shoes_store/src/search/views/search.dart';
 import 'package:shoes_store/src/splashscreen/views/splashscreen_page.dart';
 
 import '../../main.dart';
@@ -41,10 +42,10 @@ final GoRouter _router = GoRouter(
     //   path: '/verification',
     //   builder: (context, state) => const VerificationPage(),
     // ),
-    // GoRoute(
-    //   path: '/search',
-    //   builder: (context, state) => const SearchPage(),
-    // ),
+    GoRoute(
+      path: '/search',
+      builder: (context, state) => const CustomSearch(),
+    ),
     // GoRoute(
     //   path: '/help',
     //   builder: (context, state) => const HelpCenterPage(),

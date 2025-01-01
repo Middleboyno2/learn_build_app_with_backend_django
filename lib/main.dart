@@ -9,6 +9,7 @@ import 'package:shoes_store/common/utils/kstrings.dart';
 import 'package:shoes_store/src/entrypoint/controllers/bottom_tab_notifier.dart';
 import 'package:shoes_store/src/home/controllers/home_notifier.dart';
 import 'package:shoes_store/src/onboarding/controllers/onboarding_notifier.dart';
+import 'package:shoes_store/src/search/controllers/search_notifier.dart';
 import 'package:shoes_store/src/splashscreen/views/splashscreen_page.dart';
 
 import 'common/utils/dark_theme.dart';
@@ -27,7 +28,8 @@ void main() async{
       providers: [
         ChangeNotifierProvider(create: (_) => OnboardingNotifier()),
         ChangeNotifierProvider(create: (_) => BottomTabNotifier()),
-        ChangeNotifierProvider(create: (_) => HomeNotifier())
+        ChangeNotifierProvider(create: (_) => HomeNotifier()),
+        ChangeNotifierProvider(create: (_) => SearchNotifier())
       ],
       child: const MyApp()
     )

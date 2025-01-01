@@ -4,7 +4,7 @@
   import 'package:shoes_store/src/home/controllers/home_notifier.dart';
   import 'package:shoes_store/src/home/widgets/custom_app_bar.dart';
   import 'package:shoes_store/src/home/widgets/list_card/custom_card.dart';
-  import 'package:shoes_store/src/home/widgets/search.dart';
+
 
   import '../../../const/resource.dart';
 
@@ -33,7 +33,6 @@
                 appBar: PreferredSize(
                   preferredSize: Size.fromHeight(70),
                   child: CustomAppBar(
-                    isSearch: value.isSearch,
                     changeSearch: value.changeSearch,
                   ),
                 ),
@@ -71,13 +70,6 @@
                     ),
                   ],
                 ),
-              ),
-
-              // second screen
-              CustomSearch(
-                controller: value.searchController,
-                changeSearch: value.changeSearch,
-                isSearch: value.isSearch
               ),
 
             ],

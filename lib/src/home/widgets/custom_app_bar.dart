@@ -7,12 +7,10 @@ import 'package:shoes_store/common/widgets/reusable_text.dart';
 import 'package:shoes_store/src/home/widgets/notification_widget.dart';
 
 class CustomAppBar extends StatelessWidget {
-  final bool isSearch;
-  final VoidCallback changeSearch;
+  final Function changeSearch;
 
   const CustomAppBar({
     super.key,
-    required this.isSearch,
     required this.changeSearch,
 
   });
@@ -60,7 +58,7 @@ class CustomAppBar extends StatelessWidget {
       actions: [
         IconButton(
           onPressed: (){
-            changeSearch();
+            changeSearch(context);
           },
           icon: Icon(Icons.search),
         ),
