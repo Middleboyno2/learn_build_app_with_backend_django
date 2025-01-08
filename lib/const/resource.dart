@@ -39,4 +39,16 @@ class R {
 
   /// ![preview](file:///Volumes/Transfer/Projects/fashion/assets/images/wishlist.png)
   static const String ASSETS_IMAGES_WISHLIST_PNG = 'assets/images/wishlist.png';
+
+  static const String ASSETS_IMAGES_BANNER_TEST_01 = "assets/images/banner_test/banner_1.jpg";
+
+  static const String ASSETS_IMAGES_BANNER_TEST_02 = "assets/images/banner_test/banner_2.jpg";
+
+  static const String ASSETS_IMAGES_BANNER_TEST_03 = "assets/images/banner_test/banner_3.jpg";
+
+  static const String ASSETS_IMAGES_BANNER_TEST_04 = "assets/images/banner_test/banner_4.jpg";
+
+  static const String ASSETS_IMAGES_BANNER_TEST_05 = "assets/images/banner_test/banner_5.jpg";
+
+  static const String ASSETS_IMAGES_BANNER_TEST_06 = "assets/images/banner_test/banner_6.png";
 }

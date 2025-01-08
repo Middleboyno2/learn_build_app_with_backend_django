@@ -6,6 +6,7 @@ import 'package:provider/provider.dart';
 import 'package:shoes_store/common/utils/app_routes.dart';
 import 'package:shoes_store/common/utils/environment.dart';
 import 'package:shoes_store/common/utils/kstrings.dart';
+import 'package:shoes_store/src/category/notifier/category_notifier.dart';
 import 'package:shoes_store/src/entrypoint/controllers/bottom_tab_notifier.dart';
 import 'package:shoes_store/src/home/controllers/home_notifier.dart';
 import 'package:shoes_store/src/onboarding/controllers/onboarding_notifier.dart';
@@ -19,6 +20,7 @@ void main() async{
   WidgetsFlutterBinding.ensureInitialized();
   // load environment
   await dotenv.load(fileName: Environment.fileName);
+  // load
 
   // load get_storage
   await GetStorage.init();
@@ -29,7 +31,8 @@ void main() async{
         ChangeNotifierProvider(create: (_) => OnboardingNotifier()),
         ChangeNotifierProvider(create: (_) => BottomTabNotifier()),
         ChangeNotifierProvider(create: (_) => HomeNotifier()),
-        ChangeNotifierProvider(create: (_) => SearchNotifier())
+        ChangeNotifierProvider(create: (_) => SearchNotifier()),
+        ChangeNotifierProvider(create: (_) => CategoryNotifier()),
       ],
       child: const MyApp()
     )

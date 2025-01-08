@@ -30,14 +30,13 @@ class _CustomSearchState extends State<CustomSearch> {
             title: Row(
               children: [
                 // Icon với AnimatedContainer
-                AnimatedContainer(
-                  duration: Duration(milliseconds: 400),
+                Container(
                   height: 40.0,
                   width: 40.0,
                   margin: EdgeInsets.symmetric(horizontal: 10.0),
                   decoration: BoxDecoration(
-                    color: Colors.blue.shade300,
-                    borderRadius: BorderRadius.circular(10),
+                    color: Kolors.kPrimaryLight,
+                    borderRadius: BorderRadius.circular(12),
                   ),
                   child: IconButton(
                     onPressed: value.toggleAppBar,
@@ -50,15 +49,13 @@ class _CustomSearchState extends State<CustomSearch> {
                 ),
                 // TextField
                 Expanded(
-                  child: Padding(
-                    padding: EdgeInsets.symmetric(vertical: 5.0),
-                    child: TextField(
-                      decoration: InputDecoration(
+                  child: TextField(
+                    decoration: InputDecoration(
                         hintText: "Search",
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(20),
                         ),
-                      ),
+                        prefixIcon: Icon(Icons.search)
                     ),
                   ),
                 ),
@@ -72,9 +69,18 @@ class _CustomSearchState extends State<CustomSearch> {
                 ),
               ],
             ),
-            bottom: PreferredSize(
-              preferredSize: Size.fromHeight(200),
-              child:FilterWidget(isExpanded: value.isExpanded)
+          ),
+          body: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                FilterWidget(isExpanded: value.isExpanded),
+                ListItem(),
+                ListItem(),
+                ListItem(),
+                ListItem(),
+                ListItem()
+              ],
             ),
           ),
 

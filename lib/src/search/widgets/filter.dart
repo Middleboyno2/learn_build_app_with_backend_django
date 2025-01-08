@@ -8,15 +8,15 @@ class FilterWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return AnimatedContainer(
       duration: Duration(milliseconds: 400),
-      alignment: Alignment.topCenter,
       height: isExpanded ? 200.0 : 0.0, // Thay đổi chiều cao
-      color: Colors.grey.shade200,
-      child: Center(
+      child: const Center(
         child: Text(
-          "This is expandable content",
-          style: TextStyle(fontSize: 16.0),
+          "This is a content",
+          style: TextStyle(fontSize: 16),
         ),
-      ),
+
+      )
+
     );
   }
 }

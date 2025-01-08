@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:shoes_store/src/category/views/categories.dart';
+import 'package:shoes_store/src/category/widgets/category_detail.dart';
 import 'package:shoes_store/src/entrypoint/views/entrypoint.dart';
 import 'package:shoes_store/src/login/views/auth.dart';
 import 'package:shoes_store/src/notification/views/notification.dart';
@@ -62,14 +64,14 @@ final GoRouter _router = GoRouter(
     //   path: '/register',
     //   builder: (context, state) => const RegistrationPage(),
     // ),
-    // GoRoute(
-    //   path: '/categories',
-    //   builder: (context, state) => const CategoriesPage(),
-    // ),
-    //  GoRoute(
-    //   path: '/category',
-    //   builder: (context, state) => const CategoryPage(),
-    // ),
+    GoRoute(
+      path: '/categories',
+      builder: (context, state) => const CategoriesPage(),
+    ),
+     GoRoute(
+      path: '/category',
+      builder: (context, state) => const CategoryDetail(),
+    ),
     //
     // GoRoute(
     //   path: '/addaddress',

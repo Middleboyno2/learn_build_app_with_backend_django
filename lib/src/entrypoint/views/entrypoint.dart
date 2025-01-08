@@ -38,12 +38,12 @@ class _AppEntryPointState extends State<AppEntryPoint> {
               Container(
                 height: ScreenUtil().screenHeight,
                 width: ScreenUtil().screenWidth,
-                decoration: const BoxDecoration(
-                  image: DecorationImage(
-                      image: AssetImage(R.ASSETS_IMAGES_WAVE_JPEG),
-                      fit: BoxFit.cover
-                  ),
-                ),
+                // decoration: const BoxDecoration(
+                //   image: DecorationImage(
+                //       image: AssetImage(R.ASSETS_IMAGES_WAVE_JPEG),
+                //       fit: BoxFit.cover
+                //   ),
+                // ),
                 child: _page[context.watch<BottomTabNotifier>().selected],
               ),
 
